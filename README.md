@@ -28,12 +28,12 @@ Hasil histogram memperlihatkan variasi yang cukup besar: ada gambar dengan puluh
 ### 2. Visualisasi Titik Kepala
 Untuk verifikasi label, kami overlay titik dari JSON di atas gambar.  
 Hasilnya terlihat cukup konsisten: setiap titik mewakili posisi kepala.  
-data-with-label.png
+![Data dengan label](data-with-label.png)
 
 ### 3. Dari Titik ke Density Map
 Label JSON kemudian kami ubah ke **density map** menggunakan metode **NormDM** (Normalised Density Map) dengan sigma adaptif berbasis jarak tetangga terdekat.  
 Density ini bersifat “preserve count”: integral dari peta ≈ jumlah titik.  
-density.png
+![Density](density.png)
 
 EDA ini membuat kami yakin bahwa pendekatan density regression memang cocok untuk masalah ini.
 
@@ -89,7 +89,7 @@ Kami tidak hanya berhenti di angka. Kami juga lihat prediksi pada gambar validas
 - **Undercount**: biasanya terjadi pada crowd sangat padat di area gelap/blur.  
 - **Overcount**: sering muncul di pola berulang (poster, background dengan tekstur).  
 - Visualisasi GT vs pred membantu mengidentifikasi pola ini.  
-predict.png
+![prediksi](predict.png)
 
 ---
 
